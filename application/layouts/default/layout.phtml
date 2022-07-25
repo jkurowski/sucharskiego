@@ -52,6 +52,8 @@
     <script src="<?=$this->jsUrl();?>/pietro.js" charset="utf-8"></script>
     <script src="<?=$this->jsUrl();?>/tip.js" charset="utf-8"></script>
 
+    <script src="<?=$this->jsUrl();?>/leaflet.js" charset="utf-8"></script>
+
     <script src="<?=$this->jsUrl(); ?>/validation.js" charset="utf-8"></script>
     <script src="<?=$this->jsUrl(); ?>/pl.js" charset="utf-8"></script>
 
@@ -67,6 +69,21 @@
         });
 
 	$(document).ready(function(){
+
+        let map = L.map('mapHolder', {scrollWheelZoom: false}).setView([51.97483719343814, 20.13677801599504], 17);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        const markerIcon = L.icon({
+            iconUrl: '<?=$this->gfxUrl();?>/marker.png',
+            iconAnchor: [37, 80],
+            iconSize: [74, 82]
+        });
+        L.marker([
+            '51.97483719343814',
+            '20.13677801599504'
+        ], {icon: markerIcon}).addTo(map);
+
         $(".validateForm").validationEngine({
             validateNonVisibleFields: true,
             updatePromptsPosition:true,
