@@ -25,7 +25,7 @@
         <?php } ?>
 
         <div class="row row-mieszkanie">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-5">
                 <div class="mieszkanie-dane">
                     <div class="<?=$this->roomStatusTag($this->mieszkanie->status);?>-ap mieszkanie-status">
                         <?=$this->roomStatus($this->mieszkanie->status);?>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-7">
                 <?php if($this->mieszkanie->plik){?>
                     <div class="mieszkanie-rzut">
                         <a href="<?=$this->filesUrl(); ?>/inwestycje/pomieszczenie/<?=$this->mieszkanie->plik;?>" title="<?=$this->mieszkanie->nazwa;?>"><img src="<?=$this->filesUrl(); ?>/inwestycje/pomieszczenie/<?=$this->mieszkanie->plik;?>" alt="<?=$this->mieszkanie->nazwa;?>"></a>

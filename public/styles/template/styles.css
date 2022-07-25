@@ -953,6 +953,199 @@ div[class*='col-'].slick-slide {
 #mainInvestor img {
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.08);
 }
+/* Podstrony
+================================================== */
+#page {
+  padding: 70px 0;
+}
+#page.notop {
+  padding-top: 0;
+}
+#page.nobottom {
+  padding-bottom: 0;
+}
+#pageheader {
+  background: #005229;
+  padding: 170px 0 60px;
+}
+#pageheader h1 {
+  margin: 0;
+  color: white;
+}
+/* Karta mieszkania
+================================================== */
+.row-plan-nav .bttn {
+  background: white;
+  color: #000;
+  border: 1px solid #222;
+  transition: all 200ms ease-in-out;
+}
+.row-plan-nav .bttn:hover {
+  background: #222;
+  color: white;
+}
+.row-plan-nav .la-arrow-right {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+.row-plan-nav .la-arrow-left {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.mieszkanie-dane h2 {
+  text-transform: uppercase;
+  margin-top: 29px;
+  margin-bottom: 10px !important;
+}
+.mieszkanie-dane li {
+  color: #7f8794;
+  padding: 11px 0;
+  border-bottom: 1px solid #ebeef2;
+  font-size: 19px;
+}
+.mieszkanie-dane li:last-child {
+  border: 0;
+}
+.mieszkanie-dane li span {
+  float: right;
+  text-align: right;
+  font-weight: 700;
+  color: #404040;
+}
+.mieszkanie-status {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+.mieszkanie-dane .dostepny-ap {
+  color: white;
+  background: #43970d;
+}
+.mieszkanie-dane .sprzedany-ap {
+  color: white;
+  background: #F31919;
+}
+.mieszkanie-dane .rezerwacja-ap {
+  color: white;
+  background: #1B71E1;
+}
+#mieszkanie .bttn-pdf {
+  transition: all 200ms ease-in-out;
+  background: #005229;
+  color: white;
+}
+#mieszkanie .bttn-pdf:hover {
+  background: #439d4e;
+  border-color: #439d4e;
+  color: white;
+}
+.mieszkanie-tekst h3 {
+  font-size: 26px;
+  font-weight: 600;
+  color: black;
+  position: relative;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.mieszkanie-tekst h3:after {
+  width: 135px;
+  height: 8px;
+  background: var(--main-green);
+  display: block;
+  content: "";
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/* RODO
+================================================== */
+.sendok {
+  background: #439500;
+  color: white;
+  padding: 10px 15px;
+}
+.senderror {
+  background: #d50000;
+  color: white;
+  padding: 10px 15px;
+}
+.sendok p,
+.senderror p {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+  line-height: normal;
+}
+.obowiazek p,
+.regulki label {
+  font-size: 12px;
+  line-height: 17px;
+  color: #6c6c6c;
+}
+.regulki {
+  position: relative;
+}
+.regulki .formError {
+  top: 16px !important;
+}
+.regulki label {
+  padding: 0 0 5px 23px;
+  position: relative;
+  margin-top: 16px;
+  cursor: pointer;
+}
+.regulki input[type='checkbox'] {
+  position: absolute;
+  left: 0;
+  top: 18px;
+}
+#contact-form .form-input,
+#contact-form .form-input label,
+#contact-form input[type="text"],
+#contact-form input[type="tel"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  position: relative;
+  transition: all 200ms ease-in-out;
+}
+#contact-form .form-input label {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 500;
+  display: inline-block;
+  width: 90%;
+  top: 36px;
+  left: 20px;
+  z-index: 1;
+  cursor: pointer;
+}
+#contact-form .filled label {
+  top: 10px;
+  font-size: 15px;
+  left: 0;
+  font-weight: 400;
+  display: inline;
+  background: white;
+  z-index: 20;
+  padding: 0 20px;
+  color: #9d9d9d;
+}
+#contact-form input,
+#contact-form textarea {
+  border: 1px solid #707070;
+  padding: 12px 20px;
+}
+#contact-form .filled input,
+#contact-form .filled textarea {
+  border: 1px solid #06562e;
+}
+#contact-form textarea {
+  padding-top: 20px;
+  height: 120px;
+}
 /* Footer
 ================================================== */
 #footer {
