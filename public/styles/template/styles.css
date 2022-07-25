@@ -923,7 +923,7 @@ div[class*='col-'].slick-slide {
 }
 #mainWhy .why-box-col {
   padding: 0 35px;
-  max-width: 490px;
+  width: 470px;
   margin-top: 70px;
 }
 #mainWhy .why-box {
