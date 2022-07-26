@@ -2,22 +2,22 @@
 
 <div id="mainAbout">
     <div class="container">
-        <div class="row">
+        <div class="row inline">
             <div class="col-6">
                 <div class="section-img">
-                    <img src="<?=$this->gfxUrl();?>/about.jpg" alt="<?= $this->header['nazwa']; ?>" width="740" height="660">
+                    <img src="<?=$this->getInline($this->inline, 1, 'obrazek');?>" alt="<?=$this->getInline($this->inline, 1, 'obrazek_alt');?>" data-img="1" width="740" height="660">
                 </div>
             </div>
             <div class="col-6 d-flex align-items-center">
                 <div class="section-text pl-5">
-                    <h2 class="section-title">APARTAMENTY SUCHARSKIEGO</h2>
-                    <p>Apartamenty Sucharskiego to kameralna inwestycja położona na osiedlu Widok w Skierniewicach. Doskonała lokalizacja zapewnia idealne skomunikowanie z resztą miasta, oferuje bogatą infrastrukturę oraz mnóstwo zieleni w okolicy.</p>
-                    <p>&nbsp;</p>
-                    <p>W budynku powstanie jedynie 20 mieszkań co czyni inwestycję wyjątkową i dyskretną. Przewidziano 4 kondygnacje nadziemne oraz parking podziemny mieszczący 19 samochodów. Przed budynkiem zaplanowano miejsce parkingowe dla osób niepełnosprawnych.</p>
-                    <p>&nbsp;</p>
-                    <p>Dodatkowym atutem jest 5 mieszkań z ogródkami o powierzchni od 60m2 do aż 110m2.  Budynek znajduje się w bliskiej odległości od marketów spożywczych, budowlanych, szkoły czy lasu.</p>
+                    <h2 class="section-title" data-modaltytul="1"><?=$this->getInline($this->inline, 1, 'modaltytul');?></h2>
+                    <div data-modaleditortext="1">
+                        <?=$this->getInline($this->inline, 1, 'modaleditortext');?>
+                    </div>
                 </div>
             </div>
+            <?=$this->inlineModal(1, 'modaltytul,modaleditortext,obrazek,obrazek_alt', '740,660');?>
+            <?php //'modaltytul', 'modaleditor', 'modaleditortext', 'modallink', 'obrazek', 'obrazek_alt', 'modallinkbutton' ?>
         </div>
     </div>
 </div>
@@ -66,13 +66,15 @@
 
 <div id="mainRooms">
     <div class="container">
-        <div class="row d-flex justify-content-center text-center">
+        <div class="row d-flex justify-content-center text-center inline">
             <div class="col-12">
-                <h2 class="section-title">RODZAJE MIESZKAŃ</h2>
+                <h2 class="section-title" data-modaltytul="2"><?=$this->getInline($this->inline, 2, 'modaltytul');?></h2>
             </div>
             <div class="col-6">
-                <p class="section-title-text">Quisque eu cursus quam. Vivamus dignissim, purus rhoncus interdum posuere, nunc magna porttitor turpis, non consectetur augue arcu dictum erat.</p>
+                <p class="section-title-text" data-modaleditor="2"><?=$this->getInline($this->inline, 2, 'modaleditor');?></p>
             </div>
+            <?=$this->inlineModal(2, 'modaltytul,modaleditor', '740,660');?>
+            <?php //'modaltytul', 'modaleditor', 'modaleditortext', 'modallink', 'obrazek', 'obrazek_alt', 'modallinkbutton' ?>
         </div>
         <div class="row">
             <div class="col-12">
@@ -342,13 +344,15 @@
 
 <div id="mainLocation">
     <div class="container">
-        <div class="row d-flex justify-content-center text-center">
+        <div class="row d-flex justify-content-center text-center inline">
             <div class="col-12">
-                <h2 class="section-title">LOKALIZACJA</h2>
+                <h2 class="section-title" data-modaltytul="3"><?=$this->getInline($this->inline, 3, 'modaltytul');?></h2>
             </div>
             <div class="col-6">
-                <p class="section-title-text">Doskonała lokalizacja zapewnia idealne skomunikowanie z resztą miasta, oferuje bogatą infrastrukturę oraz mnóstwo zieleni w okolicy.</p>
+                <p class="section-title-text" data-modaleditor="3"><?=$this->getInline($this->inline, 3, 'modaleditor');?></p>
             </div>
+            <?=$this->inlineModal(3, 'modaltytul,modaleditor', '740,660');?>
+            <?php //'modaltytul', 'modaleditor', 'modaleditortext', 'modallink', 'obrazek', 'obrazek_alt', 'modallinkbutton' ?>
         </div>
         <div class="row">
             <div class="col-12 mt-5 mb-5">
@@ -479,13 +483,15 @@
 
 <div id="mainGallery">
     <div class="container">
-        <div class="row d-flex justify-content-center text-center">
+        <div class="row d-flex justify-content-center text-center inline">
             <div class="col-12">
-                <h2 class="section-title">GALERIA</h2>
+                <h2 class="section-title" data-modaltytul="4"><?=$this->getInline($this->inline, 4, 'modaltytul');?></h2>
             </div>
             <div class="col-6">
-                <p class="section-title-text">Quisque eu cursus quam. Vivamus dignissim, purus rhoncus interdum posuere, nunc magna porttitor turpis, non consectetur augue arcu dictum erat.</p>
+                <p class="section-title-text" data-modaleditor="4"><?=$this->getInline($this->inline, 4, 'modaleditor');?></p>
             </div>
+            <?=$this->inlineModal(4, 'modaltytul,modaleditor', '740,660');?>
+            <?php //'modaltytul', 'modaleditor', 'modaleditortext', 'modallink', 'obrazek', 'obrazek_alt', 'modallinkbutton' ?>
         </div>
     </div>
     <div class="container-fluid mt-5">
@@ -512,13 +518,15 @@
 
 <div id="mainWhy">
     <div class="container">
-        <div class="row d-flex justify-content-center text-center">
+        <div class="row d-flex justify-content-center text-center inline">
             <div class="col-12">
-                <h2 class="section-title">DLACZEGO WARTO</h2>
+                <h2 class="section-title" data-modaltytul="5"><?=$this->getInline($this->inline, 5, 'modaltytul');?></h2>
             </div>
             <div class="col-6">
-                <p class="section-title-text">Quisque eu cursus quam. Vivamus dignissim, purus rhoncus interdum posuere, nunc magna porttitor turpis, non consectetur augue arcu dictum erat.</p>
+                <p class="section-title-text" data-modaleditor="5"><?=$this->getInline($this->inline, 5, 'modaleditor');?></p>
             </div>
+            <?=$this->inlineModal(5, 'modaltytul,modaleditor', '740,660');?>
+            <?php //'modaltytul', 'modaleditor', 'modaleditortext', 'modallink', 'obrazek', 'obrazek_alt', 'modallinkbutton' ?>
         </div>
         <div class="row">
             <div class="col-12 d-flex flex-wrap justify-content-center">
@@ -619,20 +627,22 @@
 
 <div id="mainInvestor">
     <div class="container">
-        <div class="row">
+        <div class="row inline">
             <div class="col-5">
                 <div class="section-img">
-                    <img src="<?=$this->gfxUrl();?>/eps.jpg" alt="<?= $this->header['nazwa']; ?>" width="610" height="450">
+                    <img src="<?=$this->getInline($this->inline, 6, 'obrazek');?>" alt="<?=$this->getInline($this->inline, 6, 'obrazek_alt');?>" data-img="6" width="610" height="450">
                 </div>
             </div>
             <div class="col-7 d-flex align-items-center">
                 <div class="section-text pl-5">
-                    <h2 class="section-title">EPS DEVELOPMENT</h2>
-                    <p>Spółka powstała w 2021 roku z wizją realizacji szeregu budynków mieszkalnych na terenie całej Polski. Udziałowcami spółki EPS Development są osoby mające bogate i ponad 30 letnie doświadczenie w branży budowlanej, w tym Członkowie Zarządu spółki EL-INWEST ze Skierniewic działającej w całej Polsce od ponad 30 lat.</p>
-                    <p>&nbsp;</p>
-                    <p>Pomysł stworzenia spółki EPS Development narodził się w momencie, kiedy okazało się, że na skierniewickim rynku mieszkań brakuje małych, kameralnych inwestycji, a lokalni deweloperzy nastawieni są na budowę apartamentowców, w których na raz mieszka kilkuset mieszkańców - co dla wielu jest uciążliwe.</p>
+                    <h2 class="section-title" data-modaltytul="6"><?=$this->getInline($this->inline, 6, 'modaltytul');?></h2>
+                    <div data-modaleditortext="6">
+                        <?=$this->getInline($this->inline, 6, 'modaleditortext');?>
+                    </div>
                 </div>
             </div>
+            <?=$this->inlineModal(6, 'modaltytul,modaleditortext,obrazek,obrazek_alt', '610,450');?>
+            <?php //'modaltytul', 'modaleditor', 'modaleditortext', 'modallink', 'obrazek', 'obrazek_alt', 'modallinkbutton' ?>
         </div>
     </div>
 </div>
