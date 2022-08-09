@@ -21,7 +21,7 @@ class Default_InwestycjeDomekController extends kCMS_Site
 
         $numer = $this->getRequest()->getParam('numer');
         $tag = $this->getRequest()->getParam('tag');
-        $inwestycja = $this->Investment->getByTag('pod77');
+        $inwestycja = $this->Investment->getByTag('sucharskiego');
 
         if($inwestycja){
             $mieszkanie = $this->Room->getRoom($inwestycja->id, $numer);
