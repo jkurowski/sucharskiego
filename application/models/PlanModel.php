@@ -6,8 +6,8 @@ class Model_PlanModel  extends Zend_Db_Table_Abstract
     protected $_primary = 'id';
     protected $_db_table;
 
-    const IMG_WIDTH = 1210;
-    const IMG_HEIGHT = 793;
+    const IMG_WIDTH = 1500;
+    const IMG_HEIGHT = 933;
 
     public function init()
     {

@@ -4,7 +4,7 @@ class Model_FloorModel  extends Zend_Db_Table_Abstract
     public $_name = 'inwestycje_pietro';
     protected $_primary = 'id';
 
-    const IMG_WIDTH = 1210;
+    const IMG_WIDTH = 1500;
 
     /**
      * Admin - Pokaz wybrane pietro po id
