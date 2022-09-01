@@ -6,6 +6,7 @@ class Default_IndexController extends kCMS_Site
     private $roomModel;
     private $planModel;
     private $photoModel;
+    private $showroomModel;
     private $sliderModel;
     private $menuModel;
     private $atutModel;
@@ -22,6 +23,7 @@ class Default_IndexController extends kCMS_Site
         $this->atutModel = new Model_AtutModel();
         $this->boxModel = new Model_BoxModel();
         $this->floorModel = new Model_FloorModel();
+        $this->showroomModel = new Model_ShowroomModel();
     }
 
     public function indexAction() {
@@ -50,6 +52,7 @@ class Default_IndexController extends kCMS_Site
             'contact' => $this->menuModel->getById(3),
             'atuty' => $this->atutModel->fetchAll($this->atutModel->select()->order('sort ASC')),
             'boksy' => $this->boxModel->fetchAll($this->boxModel->select()->order('sort ASC')),
+            'showrooms' => $this->showroomModel->fetchAll($this->showroomModel->select()->order('sort ASC')),
             'message' => $trySendEmail
         );
 

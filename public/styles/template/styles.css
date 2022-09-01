@@ -560,6 +560,11 @@ nav li a.cta:hover {
   font-size: 14px;
   line-height: 24px;
 }
+#mainRooms .room-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 #mainRooms .nav-link {
   display: block;
   padding: 19px 0;
@@ -571,6 +576,7 @@ nav li a.cta:hover {
   border-radius: 0;
   width: 230px;
   text-align: center;
+  text-transform: uppercase;
 }
 #mainRooms .nav-tabs {
   border-bottom: 0;

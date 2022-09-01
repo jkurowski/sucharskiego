@@ -79,133 +79,32 @@
         <div class="row">
             <div class="col-12">
                 <ul class="nav nav-tabs mt-5" id="roomsTab" role="tablist">
+                    <?php foreach($this->showrooms as $int => $showroom) { ?>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="room1-tab" data-toggle="tab" href="#room1" role="tab" aria-controls="room1" aria-selected="true">MIESZKANIE 1</a>
+                        <a class="nav-link<?php if($int == 0){?> active<?php } ?>" id="room<?=$showroom->id;?>-tab" data-toggle="tab" href="#room<?=$showroom->id;?>" role="tab" aria-controls="room<?=$showroom->id;?>"<?php if($int == 0){?>  aria-selected="true"<?php } ?>><?=$showroom->name;?></a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="room2-tab" data-toggle="tab" href="#room2" role="tab" aria-controls="room2" aria-selected="false">MIESZKANIE 2</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="room3-tab" data-toggle="tab" href="#room3" role="tab" aria-controls="room3" aria-selected="false">MIESZKANIE 3</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="room4-tab" data-toggle="tab" href="#room4" role="tab" aria-controls="room4" aria-selected="false">MIESZKANIE 4</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="room5-tab" data-toggle="tab" href="#room5" role="tab" aria-controls="room5" aria-selected="false">MIESZKANIE 5</a>
-                    </li>
+                    <?php } ?>
                 </ul>
                 <div class="tab-content" id="roomsTabContent">
-                    <div class="tab-pane fade show active" id="room1" role="tabpanel" aria-labelledby="room1-tab">
+                    <?php foreach($this->showrooms as $int => $showroom) { ?>
+                    <div class="tab-pane fade <?php if($int == 0){?>show active<?php } ?>" id="room<?=$showroom->id;?>" role="tabpanel" aria-labelledby="room<?=$showroom->id;?>-tab">
                         <div class="row">
                             <div class="col-3">
                                 <div class="room-text">
-                                    <h3>52.4 m<sup>2</sup></h3>
-                                    <p>Donec faucibus est in tortor lacinia, ut rhoncus quam tempor. Etiam tincidunt tellus faucibus dui mattis vulputate in nec risus. Nulla facilisi. Phasellus mi est, laoreet eu vestibulum at, feugiat ut nisl.</p>
-                                    <ul class="mb-0 list-unstyled">
-                                        <li>Pokoje<span>2</span></li>
-                                        <li>Sypialnia<span>1</span></li>
-                                        <li>Balkon<span>12 m<sup>2</sup></span></li>
-                                        <li>Łazienka<span>7 m<sup>2</sup></span></li>
-                                    </ul>
+                                    <h3><?=$showroom->area;?></h3>
+                                    <p><?=$showroom->text;?></p>
+                                    <?=$showroom->params;?>
                                     <a class="bttn bttn-green" href="#">POKAŻ MIESZKANIA</a>
                                 </div>
                             </div>
                             <div class="col-9 d-flex align-items-center justify-content-center">
                                 <div class="room-img">
-                                    <img src="<?=$this->gfxUrl();?>/przykladowe.jpg" alt="<?= $this->header['nazwa']; ?>" width="900" height="666">
+                                    <img src="<?=$this->filesUrl();?>/showrooms/<?=$this->escape($showroom->file);?>" alt="<?=$showroom->name;?>" width="900" height="660">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="room2" role="tabpanel" aria-labelledby="room2-tab">
-                        <div class="row">
-                            <div class="col-3">
-                                <div class="room-text">
-                                    <h3>52.4 m<sup>2</sup></h3>
-                                    <p>Donec faucibus est in tortor lacinia, ut rhoncus quam tempor. Etiam tincidunt tellus faucibus dui mattis vulputate in nec risus. Nulla facilisi. Phasellus mi est, laoreet eu vestibulum at, feugiat ut nisl.</p>
-                                    <ul class="mb-0 list-unstyled">
-                                        <li>Pokoje<span>2</span></li>
-                                        <li>Sypialnia<span>1</span></li>
-                                        <li>Balkon<span>12 m<sup>2</sup></span></li>
-                                        <li>Łazienka<span>7 m<sup>2</sup></span></li>
-                                    </ul>
-                                    <a class="bttn bttn-green" href="#">POKAŻ MIESZKANIA</a>
-                                </div>
-                            </div>
-                            <div class="col-9 d-flex align-items-center justify-content-center">
-                                <div class="room-img">
-                                    <img src="<?=$this->gfxUrl();?>/przykladowe.jpg" alt="<?= $this->header['nazwa']; ?>" width="900" height="666">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="room3" role="tabpanel" aria-labelledby="room3-tab">
-                        <div class="row">
-                            <div class="col-3">
-                                <div class="room-text">
-                                    <h3>74.8 m<sup>2</sup></h3>
-                                    <p>Donec faucibus est in tortor lacinia, ut rhoncus quam tempor. Etiam tincidunt tellus faucibus dui mattis vulputate in nec risus. Nulla facilisi. Phasellus mi est, laoreet eu vestibulum at, feugiat ut nisl.</p>
-                                    <ul class="mb-0 list-unstyled">
-                                        <li>Pokoje<span>2</span></li>
-                                        <li>Sypialnia<span>1</span></li>
-                                        <li>Balkon<span>12 m<sup>2</sup></span></li>
-                                        <li>Łazienka<span>7 m<sup>2</sup></span></li>
-                                    </ul>
-                                    <a class="bttn bttn-green" href="#">POKAŻ MIESZKANIA</a>
-                                </div>
-                            </div>
-                            <div class="col-9 d-flex align-items-center justify-content-center">
-                                <div class="room-img">
-                                    <img src="<?=$this->gfxUrl();?>/przykladowe.jpg" alt="<?= $this->header['nazwa']; ?>" width="900" height="666">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="room4" role="tabpanel" aria-labelledby="room3-tab">
-                        <div class="row">
-                            <div class="col-3">
-                                <div class="room-text">
-                                    <h3>80.56 m<sup>2</sup></h3>
-                                    <p>Donec faucibus est in tortor lacinia, ut rhoncus quam tempor. Etiam tincidunt tellus faucibus dui mattis vulputate in nec risus. Nulla facilisi. Phasellus mi est, laoreet eu vestibulum at, feugiat ut nisl.</p>
-                                    <ul class="mb-0 list-unstyled">
-                                        <li>Pokoje<span>2</span></li>
-                                        <li>Sypialnia<span>1</span></li>
-                                        <li>Balkon<span>12 m<sup>2</sup></span></li>
-                                        <li>Łazienka<span>7 m<sup>2</sup></span></li>
-                                    </ul>
-                                    <a class="bttn bttn-green" href="#">POKAŻ MIESZKANIA</a>
-                                </div>
-                            </div>
-                            <div class="col-9 d-flex align-items-center justify-content-center">
-                                <div class="room-img">
-                                    <img src="<?=$this->gfxUrl();?>/przykladowe.jpg" alt="<?= $this->header['nazwa']; ?>" width="900" height="666">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="room5" role="tabpanel" aria-labelledby="room3-tab">
-                        <div class="row">
-                            <div class="col-3">
-                                <div class="room-text">
-                                    <h3>97.5 m<sup>2</sup></h3>
-                                    <p>Donec faucibus est in tortor lacinia, ut rhoncus quam tempor. Etiam tincidunt tellus faucibus dui mattis vulputate in nec risus. Nulla facilisi. Phasellus mi est, laoreet eu vestibulum at, feugiat ut nisl.</p>
-                                    <ul class="mb-0 list-unstyled">
-                                        <li>Pokoje<span>2</span></li>
-                                        <li>Sypialnia<span>1</span></li>
-                                        <li>Balkon<span>12 m<sup>2</sup></span></li>
-                                        <li>Łazienka<span>7 m<sup>2</sup></span></li>
-                                    </ul>
-                                    <a class="bttn bttn-green" href="#">POKAŻ MIESZKANIA</a>
-                                </div>
-                            </div>
-                            <div class="col-9 d-flex align-items-center justify-content-center">
-                                <div class="room-img">
-                                    <img src="<?=$this->gfxUrl();?>/przykladowe.jpg" alt="<?= $this->header['nazwa']; ?>" width="900" height="666">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -381,76 +280,15 @@
         </div>
 
         <div class="row d-flex justify-content-center">
+            <?php foreach($this->atuty as $a) {?>
             <div class="col-3 pl-5">
                 <div class="location-box-small">
                     <div class="location-box-icon"><i class="las la-map-marker"></i></div>
-                    <h3>Skate Park</h3>
-                    <p>120 m</p>
+                    <h3><?=$a->name;?></h3>
+                    <p><?=$a->distance;?></p>
                 </div>
             </div>
-            <div class="col-3 pl-5">
-                <div class="location-box-small">
-                    <div class="location-box-icon"><i class="las la-map-marker"></i></div>
-                    <h3>Apteka</h3>
-                    <p>700 m</p>
-                </div>
-            </div>
-            <div class="col-3 pl-5">
-                <div class="location-box-small">
-                    <div class="location-box-icon"><i class="las la-map-marker"></i></div>
-                    <h3>Dworzec PKP i PKS</h3>
-                    <p>1,8 km</p>
-                </div>
-            </div>
-            <div class="col-3 pl-5">
-                <div class="location-box-small">
-                    <div class="location-box-icon"><i class="las la-map-marker"></i></div>
-                    <h3>Poczta</h3>
-                    <p>1,2 km</p>
-                </div>
-            </div>
-            <div class="col-3 pl-5">
-                <div class="location-box-small">
-                    <div class="location-box-icon"><i class="las la-map-marker"></i></div>
-                    <h3>Kościół</h3>
-                    <p>350 m</p>
-                </div>
-            </div>
-            <div class="col-3 pl-5">
-                <div class="location-box-small">
-                    <div class="location-box-icon"><i class="las la-map-marker"></i></div>
-                    <h3>Siłownia</h3>
-                    <p>bezpośrednio obok</p>
-                </div>
-            </div>
-            <div class="col-3 pl-5">
-                <div class="location-box-small">
-                    <div class="location-box-icon"><i class="las la-map-marker"></i></div>
-                    <h3>Autostrada A2</h3>
-                    <p>10 km</p>
-                </div>
-            </div>
-            <div class="col-3 pl-5">
-                <div class="location-box-small">
-                    <div class="location-box-icon"><i class="las la-map-marker"></i></div>
-                    <h3>Droga S8</h3>
-                    <p>25 km</p>
-                </div>
-            </div>
-            <div class="col-3 pl-5">
-                <div class="location-box-small">
-                    <div class="location-box-icon"><i class="las la-map-marker"></i></div>
-                    <h3>Warszawa</h3>
-                    <p>80 km</p>
-                </div>
-            </div>
-            <div class="col-3 pl-5">
-                <div class="location-box-small">
-                    <div class="location-box-icon"><i class="las la-map-marker"></i></div>
-                    <h3>Łódźa</h3>
-                    <p>65 km</p>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 </div>
