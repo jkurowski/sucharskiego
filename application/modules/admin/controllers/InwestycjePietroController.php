@@ -91,9 +91,9 @@ class Admin_InwestycjePietroController extends kCMS_Admin
                     move_uploaded_file($_FILES['obrazek']['tmp_name'], FILES_PATH.'/inwestycje/pietro/'.$plik);
                     $upfile = FILES_PATH.'/inwestycje/pietro/'.$plik;
                     chmod($upfile, 0755);
-                    PhpThumbFactory::create($upfile)
-                        ->resize($floorModel::IMG_WIDTH, $floorModel::IMG_WIDTH)
-                        ->save($upfile);
+//                    PhpThumbFactory::create($upfile)
+//                        ->resize($floorModel::IMG_WIDTH, $floorModel::IMG_WIDTH)
+//                        ->save($upfile);
                     $db->update($floorModel->_name, array('plik' => $plik), 'id = '.$lastId);
                 }
 
@@ -171,9 +171,9 @@ class Admin_InwestycjePietroController extends kCMS_Admin
 
                     $upfile = FILES_PATH.'/inwestycje/pietro/'.$plik;
                     chmod($upfile, 0755);
-                    PhpThumbFactory::create($upfile)
-                        ->resize($floorModel::IMG_WIDTH, $floorModel::IMG_WIDTH)
-                        ->save($upfile);
+//                    PhpThumbFactory::create($upfile)
+//                        ->resize($floorModel::IMG_WIDTH, $floorModel::IMG_WIDTH)
+//                        ->save($upfile);
                     $db->update($floorModel->_name, array('plik' => $plik), 'id = '.$id);
                 }
 

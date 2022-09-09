@@ -88,9 +88,9 @@ class Admin_InwestycjePowierzchniaController extends kCMS_Admin
                     $options = array('jpegQuality' => 80);
 
                     PhpThumbFactory::create($upfile, $options)
-                        ->resize(960, 960)
-                        ->save($upfile)->resize(600, 600)
-                        ->save($thumbs)->resize(180, 90)
+                        ->resize(600, 600)
+                        ->save($thumbs)
+                        ->resize(180, 90)
                         ->save($lista);
                     chmod($thumbs, 0755);
                     chmod($lista, 0755);
@@ -105,8 +105,7 @@ class Admin_InwestycjePowierzchniaController extends kCMS_Admin
                     $options = array('jpegQuality' => 80);
 
                     PhpThumbFactory::create($upfile, $options)
-                        ->resize(960, 960)
-                        ->save($upfile)->resize(600, 600)
+                        ->resize(600, 600)
                         ->save($thumbs);
                     chmod($thumbs, 0755);
                     $this->Room->update(array('plik2' => $plik2), 'id = '.$lastId);
@@ -120,8 +119,7 @@ class Admin_InwestycjePowierzchniaController extends kCMS_Admin
                     $options = array('jpegQuality' => 80);
 
                     PhpThumbFactory::create($upfile, $options)
-                        ->resize(960, 960)
-                        ->save($upfile)->resize(600, 600)
+                        ->resize(600, 600)
                         ->save($thumbs);
                     chmod($thumbs, 0755);
                     $this->Room->update(array('plik3' => $plik3), 'id = '.$lastId);
@@ -232,8 +230,7 @@ class Admin_InwestycjePowierzchniaController extends kCMS_Admin
                     $options = array('jpegQuality' => 80);
 
                     PhpThumbFactory::create($upfile, $options)
-                        ->resize(960, 960)
-                        ->save($upfile)->resize(600, 600)
+                        ->resize(600, 600)
                         ->save($thumbs)->resize(180, 90)
                         ->save($lista);
                     chmod($thumbs, 0755);
@@ -252,8 +249,7 @@ class Admin_InwestycjePowierzchniaController extends kCMS_Admin
                     $options = array('jpegQuality' => 80);
 
                     PhpThumbFactory::create($upfile, $options)
-                        ->resize(960, 960)
-                        ->save($upfile)->resize(600, 600)
+                        ->resize(600, 600)
                         ->save($thumbs);
                     chmod($thumbs, 0755);
                     $this->Room->update(array('plik2' => $plik2), 'id = '.$id);
@@ -270,8 +266,7 @@ class Admin_InwestycjePowierzchniaController extends kCMS_Admin
                     $options = array('jpegQuality' => 80);
 
                     PhpThumbFactory::create($upfile, $options)
-                        ->resize(960, 960)
-                        ->save($upfile)->resize(600, 600)
+                        ->resize(600, 600)
                         ->save($thumbs);
                     chmod($thumbs, 0755);
                     $this->Room->update(array('plik3' => $plik3), 'id = '.$id);

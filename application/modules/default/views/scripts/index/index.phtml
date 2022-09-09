@@ -3,20 +3,22 @@
 <div id="mainAbout">
     <div class="container">
         <div class="row inline">
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
                 <div class="section-img">
-                    <img src="<?=$this->getInline($this->inline, 1, 'obrazek');?>" alt="<?=$this->getInline($this->inline, 1, 'obrazek_alt');?>" data-img="1" width="740" height="660">
+                    <img src="<?=$this->filesUrl(); ?>/inline/0726101052-wizualizacja-inwestycji-apartamenty-sucharskiego.jpg" alt="<?=$this->getInline($this->inline, 1, 'obrazek_alt');?>" data-img="1" class="d-none d-xl-block" width="740" height="660">
+                    <img src="<?=$this->filesUrl(); ?>/inline/0726101052-wizualizacja-inwestycji-apartamenty-sucharskiego-1530.jpg" alt="<?=$this->getInline($this->inline, 1, 'obrazek_alt');?>" data-img="1" class="d-none d-lg-block d-xl-none" width="450" height="700">
+                    <img src="<?=$this->filesUrl(); ?>/inline/0726101052-wizualizacja-inwestycji-apartamenty-sucharskiego-991.jpg" alt="<?=$this->getInline($this->inline, 1, 'obrazek_alt');?>" data-img="1" class="d-block d-lg-none" width="690" height="576">
                 </div>
             </div>
-            <div class="col-6 d-flex align-items-center">
-                <div class="section-text pl-5">
+            <div class="col-12 col-lg-6 d-flex align-items-center">
+                <div class="section-text pl-0 pl-lg-5 pt-4 pt-lg-0">
                     <h2 class="section-title" data-modaltytul="1"><?=$this->getInline($this->inline, 1, 'modaltytul');?></h2>
                     <div data-modaleditortext="1">
                         <?=$this->getInline($this->inline, 1, 'modaleditortext');?>
                     </div>
                 </div>
             </div>
-            <?=$this->inlineModal(1, 'modaltytul,modaleditortext,obrazek,obrazek_alt', '740,660');?>
+            <?=$this->inlineModal(1, 'modaltytul,modaleditortext', '740,660');?>
             <?php //'modaltytul', 'modaleditor', 'modaleditortext', 'modallink', 'obrazek', 'obrazek_alt', 'modallinkbutton' ?>
         </div>
     </div>
@@ -24,36 +26,36 @@
 
 <div id="mainBox">
     <div class="container">
-        <div class="row">
-            <div class="col">
+        <div class="row d-flex justify-content-center">
+            <div class="col-6 col-sm-4 col-lg">
                 <div class="box-icon">
                     <img src="<?=$this->gfxUrl();?>/room-icon.png" alt="Ikonka planu mieszkania" height="65" width="65">
                     <strong>20</strong>
                     <span>mieszkań</span>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-6 col-sm-4 col-lg">
                 <div class="box-icon">
                     <img src="<?=$this->gfxUrl();?>/floor-icon.png" alt="Ikonka piętra" height="65" width="65">
                     <strong>4</strong>
                     <span>kondygnacje</span>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-6 col-sm-4 col-lg">
                 <div class="box-icon">
                     <img src="<?=$this->gfxUrl();?>/parking-icon.png" alt="Ikonka miejsca parkingowego" height="65" width="65">
                     <strong>19</strong>
                     <span>miejsc <br>parkingowych</span>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-6 col-sm-4 col-lg">
                 <div class="box-icon">
                     <img src="<?=$this->gfxUrl();?>/garden-icon.png" alt="Ikonka ogródka" height="65" width="65">
                     <strong>5</strong>
                     <span>mieszkań <br>z ogródkami</span>
                 </div>
             </div>
-            <div class="col">
+            <div class="col col-sm-4 col-lg">
                 <div class="box-icon">
                     <img src="<?=$this->gfxUrl();?>/park-icon.png" alt="Ikonka ogródka" height="65" width="65">
                     <strong>1,5km</strong>
@@ -70,7 +72,7 @@
             <div class="col-12">
                 <h2 class="section-title" data-modaltytul="2"><?=$this->getInline($this->inline, 2, 'modaltytul');?></h2>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-xl-6">
                 <p class="section-title-text" data-modaleditor="2"><?=$this->getInline($this->inline, 2, 'modaleditor');?></p>
             </div>
             <?=$this->inlineModal(2, 'modaltytul,modaleditor', '740,660');?>
@@ -89,15 +91,15 @@
                     <?php foreach($this->showrooms as $int => $showroom) { ?>
                     <div class="tab-pane fade <?php if($int == 0){?>show active<?php } ?>" id="room<?=$showroom->id;?>" role="tabpanel" aria-labelledby="room<?=$showroom->id;?>-tab">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="order-2 order-lg-1 col-12 col-lg-4 col-xl-3">
                                 <div class="room-text">
                                     <h3><?=$showroom->area;?></h3>
                                     <p><?=$showroom->text;?></p>
                                     <?=$showroom->params;?>
-                                    <a class="bttn bttn-green" href="#">POKAŻ MIESZKANIA</a>
+                                    <a class="bttn bttn-green d-none" href="#">POKAŻ MIESZKANIA</a>
                                 </div>
                             </div>
-                            <div class="col-9 d-flex align-items-center justify-content-center">
+                            <div class="order-1 order-lg-2 col-12 col-lg-8 col-xl-9 d-flex align-items-center justify-content-center">
                                 <div class="room-img">
                                     <img src="<?=$this->filesUrl();?>/showrooms/<?=$this->escape($showroom->file);?>" alt="<?=$showroom->name;?>" width="900" height="660">
                                 </div>
@@ -117,7 +119,7 @@
             <div class="col-12">
                 <h2 class="section-title">MIESZKANIA</h2>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-xl-6">
                 <p class="section-title-text">Z planu budynku wybierz pietro, lub wybierz mieszkanie z <a href="#" class="scrollto"><b>listy</b> <i class="las la-angle-double-down"></i></a></p>
             </div>
         </div>
@@ -202,7 +204,7 @@
                     <?php foreach($this->domki as $d) { ?>
                         <tr data-floor="<?=$d->numer_pietro + 1;?>">
                             <td><?=$d->nazwa;?></td>
-                            <td><?=$d->numer_pietro;?></td>
+                            <td><?=$d->numer_pietro - 1;?></td>
                             <td><?=str_replace('.', '.', $d->metry);?></td>
                             <td><span class="<?=$this->roomStatusTag($d->status);?>-ap"><?=$this->roomStatus($d->status);?></span></td>
                             <td><a href="<?= $this->url(array('numer' => $d->numer), 'inwestycja-domek');?>" class="bttn bttn-green">Zobacz plan</a></td>
@@ -221,18 +223,18 @@
             <div class="col-12">
                 <h2 class="section-title" data-modaltytul="3"><?=$this->getInline($this->inline, 3, 'modaltytul');?></h2>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-xl-6">
                 <p class="section-title-text" data-modaleditor="3"><?=$this->getInline($this->inline, 3, 'modaleditor');?></p>
             </div>
             <?=$this->inlineModal(3, 'modaltytul,modaleditor', '740,660');?>
             <?php //'modaltytul', 'modaleditor', 'modaleditortext', 'modallink', 'obrazek', 'obrazek_alt', 'modallinkbutton' ?>
         </div>
         <div class="row">
-            <div class="col-12 mt-5 mb-5">
+            <div class="col-12 mt-3 mt-sm-5 mb-3 mb-sm-5">
                 <div id="mapHolder"></div>
             </div>
         </div>
-        <div class="row location-carousel">
+        <div class="row location-carousel d-none">
             <div class="col-3">
                 <div class="location-box">
                     <img src="<?=$this->gfxUrl();?>/market.jpg" alt="<?= $this->header['nazwa']; ?>" width="355" height="460">
@@ -281,7 +283,7 @@
 
         <div class="row d-flex justify-content-center">
             <?php foreach($this->atuty as $a) {?>
-            <div class="col-3 pl-5">
+            <div class="col-6 col-md-4 col-lg-3 pl-3 pl-sm-4 pl-xl-5">
                 <div class="location-box-small">
                     <div class="location-box-icon"><i class="las la-map-marker"></i></div>
                     <h3><?=$a->name;?></h3>
@@ -299,30 +301,34 @@
             <div class="col-12">
                 <h2 class="section-title" data-modaltytul="4"><?=$this->getInline($this->inline, 4, 'modaltytul');?></h2>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-xl-6">
                 <p class="section-title-text" data-modaleditor="4"><?=$this->getInline($this->inline, 4, 'modaleditor');?></p>
             </div>
             <?=$this->inlineModal(4, 'modaltytul,modaleditor', '740,660');?>
             <?php //'modaltytul', 'modaleditor', 'modaleditortext', 'modallink', 'obrazek', 'obrazek_alt', 'modallinkbutton' ?>
         </div>
     </div>
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-4 mt-sm-5">
         <div class="row gallery-carousel">
             <div class="col-10">
-                <img src="https://placehold.co/1280x760" alt="">
-                <div class="gallery-apla"><p>Curabitur eget odio in neque tincidunt luctus. Cras ultricies sed libero ut rutrum. Phasellus accumsan mi neque, vestibulum fringilla tortor consequat pharetra.</p></div>
+                <img src="<?=$this->filesUrl(); ?>/galeria/1.jpg" width="1270" height="760" alt="">
+                <div class="gallery-apla d-none"><p>Curabitur eget odio in neque tincidunt luctus. Cras ultricies sed libero ut rutrum. Phasellus accumsan mi neque, vestibulum fringilla tortor consequat pharetra.</p></div>
             </div>
             <div class="col-10">
-                <img src="https://placehold.co/1280x760" alt="">
-                <div class="gallery-apla"><p>Curabitur eget odio in neque tincidunt luctus. Cras ultricies sed libero ut rutrum. Phasellus accumsan mi neque, vestibulum fringilla tortor consequat pharetra.</p></div>
+                <img src="<?=$this->filesUrl(); ?>/galeria/2.jpg" width="1270" height="760" alt="">
+                <div class="gallery-apla d-none"><p>Curabitur eget odio in neque tincidunt luctus. Cras ultricies sed libero ut rutrum. Phasellus accumsan mi neque, vestibulum fringilla tortor consequat pharetra.</p></div>
             </div>
             <div class="col-10">
-                <img src="https://placehold.co/1280x760" alt="">
-                <div class="gallery-apla"><p>Curabitur eget odio in neque tincidunt luctus. Cras ultricies sed libero ut rutrum. Phasellus accumsan mi neque, vestibulum fringilla tortor consequat pharetra.</p></div>
+                <img src="<?=$this->filesUrl(); ?>/galeria/3.jpg" width="1270" height="760" alt="">
+                <div class="gallery-apla d-none"><p>Curabitur eget odio in neque tincidunt luctus. Cras ultricies sed libero ut rutrum. Phasellus accumsan mi neque, vestibulum fringilla tortor consequat pharetra.</p></div>
             </div>
             <div class="col-10">
-                <img src="https://placehold.co/1280x760" alt="">
-                <div class="gallery-apla"><p>Curabitur eget odio in neque tincidunt luctus. Cras ultricies sed libero ut rutrum. Phasellus accumsan mi neque, vestibulum fringilla tortor consequat pharetra.</p></div>
+                <img src="<?=$this->filesUrl(); ?>/galeria/4.jpg" width="1270" height="760" alt="">
+                <div class="gallery-apla d-none"><p>Curabitur eget odio in neque tincidunt luctus. Cras ultricies sed libero ut rutrum. Phasellus accumsan mi neque, vestibulum fringilla tortor consequat pharetra.</p></div>
+            </div>
+            <div class="col-10">
+                <img src="<?=$this->filesUrl(); ?>/galeria/5.jpg" width="1270" height="760" alt="">
+                <div class="gallery-apla d-none"><p>Curabitur eget odio in neque tincidunt luctus. Cras ultricies sed libero ut rutrum. Phasellus accumsan mi neque, vestibulum fringilla tortor consequat pharetra.</p></div>
             </div>
         </div>
     </div>
@@ -334,13 +340,13 @@
             <div class="col-12">
                 <h2 class="section-title" data-modaltytul="5"><?=$this->getInline($this->inline, 5, 'modaltytul');?></h2>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-xl-6">
                 <p class="section-title-text" data-modaleditor="5"><?=$this->getInline($this->inline, 5, 'modaleditor');?></p>
             </div>
             <?=$this->inlineModal(5, 'modaltytul,modaleditor', '740,660');?>
             <?php //'modaltytul', 'modaleditor', 'modaleditortext', 'modallink', 'obrazek', 'obrazek_alt', 'modallinkbutton' ?>
         </div>
-        <div class="row">
+        <div class="row mt-3 mt-xl-0">
             <div class="col-12 d-flex flex-wrap justify-content-center">
                 <div class="why-box-col">
                     <div class="why-box">
@@ -440,13 +446,13 @@
 <div id="mainInvestor">
     <div class="container">
         <div class="row inline">
-            <div class="col-5">
+            <div class="col-12 col-xl-5 d-flex align-items-center">
                 <div class="section-img">
                     <img src="<?=$this->getInline($this->inline, 6, 'obrazek');?>" alt="<?=$this->getInline($this->inline, 6, 'obrazek_alt');?>" data-img="6" width="610" height="450">
                 </div>
             </div>
-            <div class="col-7 d-flex align-items-center">
-                <div class="section-text pl-5">
+            <div class="col-12 col-xl-7 d-flex align-items-center">
+                <div class="section-text pl-0 pl-xl-5">
                     <h2 class="section-title" data-modaltytul="6"><?=$this->getInline($this->inline, 6, 'modaltytul');?></h2>
                     <div data-modaleditortext="6">
                         <?=$this->getInline($this->inline, 6, 'modaleditortext');?>

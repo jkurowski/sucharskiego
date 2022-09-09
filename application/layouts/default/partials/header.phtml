@@ -11,20 +11,18 @@
                 </div>
                 <div class="col-9">
                     <nav>
-                        <ul class="mainmenu list-unstyled mb-0 d-flex justify-content-end align-items-center">
-                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection"<?php } ;?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainAbout" data-offset="70">O inwestycji</a></li>
-                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection"<?php } ;?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainPlan" data-offset="70">Mieszkania</a></li>
-                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection"<?php } ;?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainLocation" data-offset="70">Lokalizacja</a></li>
-                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection"<?php } ;?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainGallery" data-offset="80">Galeria</a></li>
-                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection"<?php } ;?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainInvestor" data-offset="80">Inwestor</a></li>
+                        <ul class="mainmenu mb-0 d-flex justify-content-end align-items-center">
+                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection li-1"<?php } else {?> class="pagemenu li-1"<?php } ?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainAbout" data-offset="70">O inwestycji</a></li>
+                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection li-2"<?php } else {?> class="pagemenu li-2"<?php } ?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainPlan" data-offset="70">Mieszkania</a></li>
+                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection li-3"<?php } else {?> class="pagemenu li-3"<?php } ?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainLocation" data-offset="70">Lokalizacja</a></li>
+                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection li-4"<?php } else {?> class="pagemenu li-4"<?php } ?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainGallery" data-offset="80">Galeria</a></li>
+                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection li-5"<?php } else {?> class="pagemenu li-5"<?php } ?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainInvestor" data-offset="80">Inwestor</a></li>
                             <!--<li<?php if($this->current_controller == 'index') {?> class="scrollsection"<?php } ;?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#financing" data-offset="80">Finansowanie</a></li>!-->
-                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection"<?php } ;?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainContact" data-offset="130">Kontakt</a></li>
-                            <li>
-                                <a href="mailto:" class="cta">NAPISZ DO NAS <i class="las la-envelope-open-text"></i></a>
-                            </li>
+                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection li-6"<?php } else {?> class="pagemenu li-6"<?php } ?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainContact" data-offset="130">Kontakt</a></li>
+                            <li class="mobilemenu d-block d-lg-none"><a href="#" id="triggermenu">MENU</a></li>
+                            <li><a href="mailto:" class="cta"><span>NAPISZ DO NAS</span> <i class="las la-envelope-open-text"></i></a></li>
                         </ul>
                     </nav>
-                    <div class="mobilemenu"><a href="#" id="triggermenu">MENU</a></div>
                 </div>
             </div>
         </div>

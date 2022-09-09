@@ -1,4 +1,4 @@
-<div id="mieszkanie" class="pb-3 pb-md-5">
+<div id="mieszkanie" class="pb-3 pb-lg-5">
     <div class="container">
         <?php if($this->inwestycja->typ == 3) { ?>
             <div class="row row-plan-nav">
@@ -39,6 +39,22 @@
 
                         <?php if($this->mieszkanie->kuchnia){?>
                             <li>Aneks / kuchnia:<span><?=$this->roomKitchen($this->mieszkanie->kuchnia);?></span></li>
+                        <?php } ?>
+
+                        <?php if($this->mieszkanie->ogrodek){?>
+                            <li>Ogródek:<span><?=$this->mieszkanie->ogrodek;?></span></li>
+                        <?php } ?>
+
+                        <?php if($this->mieszkanie->balkon){?>
+                            <li>Balkon:<span><?=$this->mieszkanie->balkon;?></span></li>
+                        <?php } ?>
+
+                        <?php if($this->mieszkanie->taras){?>
+                            <li>Taras:<span><?=$this->mieszkanie->taras;?></span></li>
+                        <?php } ?>
+
+                        <?php if($this->mieszkanie->loggia){?>
+                            <li>Loggia:<span><?=$this->mieszkanie->loggia;?></span></li>
                         <?php } ?>
                     </ul>
                     <div class="container-fluid p-0">

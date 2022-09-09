@@ -431,9 +431,6 @@ header.fixed nav ul {
   border-bottom: 0;
   height: 103px;
 }
-header.fixed nav ul li:last-child {
-  margin-right: 25px;
-}
 header.fixed .col-3 {
   -ms-flex: 0 0 140px;
   flex: 0 0 140px;
@@ -451,9 +448,14 @@ nav ul {
   height: 120px;
   align-items: center;
   background: rgba(2, 26, 14, 0.2);
+  padding: 0 50px;
+  list-style: none;
 }
 nav li {
   margin-right: 52px;
+}
+nav li:last-child {
+  margin-right: 0;
 }
 nav li.active a {
   color: #ffffff;
@@ -636,6 +638,7 @@ nav li a.cta:hover {
   min-width: auto;
   text-transform: uppercase;
   color: #838383;
+  font-size: 15px;
 }
 #mainPlan .plan-nav .bttn.bttn-active {
   background: #0d560f;
@@ -1205,6 +1208,751 @@ div[class*='col-'].slick-slide {
   color: #5a5a5a;
   text-align: center;
 }
+/* RWD
+================================================== */
+.closemenu {
+  width: 40px;
+  height: 40px;
+  background: #b97a5d;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border-radius: 50%;
+  display: none;
+  z-index: 999;
+}
+.closemenu:before {
+  content: "\f00d";
+  font-family: "FontAwesome";
+  color: white;
+  font-size: 20px;
+}
+#triggermenu {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 14px;
+  transition: all 200ms linear;
+  cursor: pointer;
+  height: 38px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+}
+#triggermenu:hover {
+  background: #fff;
+  color: #054a27;
+}
+#triggermenu:before {
+  font-family: 'FontAwesome';
+  content: "\f0c9";
+  margin-right: 10px;
+  font-weight: normal;
+  width: 14px;
+  display: inline-block;
+}
+.openmenu #triggermenu {
+  background: #fff;
+  color: #054a27;
+}
+.openmenu #triggermenu:before {
+  content: "\f00d";
+}
+.openmenu header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.openmenu nav ul li.scrollsection,
+.openmenu nav ul li.pagemenu {
+  display: block;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+}
+.openmenu .scrollsection.li-1,
+.openmenu .pagemenu.li-1 {
+  top: 80px;
+}
+.openmenu .scrollsection.li-2,
+.openmenu .pagemenu.li-2 {
+  top: 145px;
+}
+.openmenu .scrollsection.li-3,
+.openmenu .pagemenu.li-3 {
+  top: 210px;
+}
+.openmenu .scrollsection.li-4,
+.openmenu .pagemenu.li-4 {
+  top: 275px;
+}
+.openmenu .scrollsection.li-5,
+.openmenu .pagemenu.li-5 {
+  top: 340px;
+}
+.openmenu .scrollsection.li-6,
+.openmenu .pagemenu.li-6 {
+  top: 405px;
+}
+.img-rwd {
+  display: none;
+}
+@media (max-width: 1645px) {
+  nav ul {
+    padding: 0 30px;
+  }
+  nav ul li {
+    margin-right: 32px;
+  }
+  header .col-3 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  header .col-9 {
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+  header #logo {
+    width: 207px;
+    margin: 40px;
+  }
+}
+@media (max-width: 1529.98px) {
+  h2 {
+    font-size: 55px;
+  }
+  #mainRooms .room-text h3 {
+    font-size: 57px;
+  }
+  #mainRooms .bttn {
+    min-width: 100%;
+    padding: 15px 0;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  #mainPlan .plan-nav .bttn {
+    font-size: 11px;
+  }
+  #mainWhy .why-box-col {
+    padding: 0 20px;
+    width: 370px;
+    margin-top: 40px;
+  }
+  #footer #logo {
+    margin: 0;
+    width: 100%;
+  }
+  #mainLocation .location-box-small {
+    padding: 15px 15px 15px 45px;
+    margin-bottom: 40px;
+  }
+  #mainLocation .location-box-small h3 {
+    font-size: 17px;
+  }
+  #mainLocation .location-box-small p {
+    font-size: 15px;
+  }
+  #mainBox .box-icon strong {
+    font-size: 46px;
+    line-height: 50px;
+  }
+  #mainBox .box-icon span {
+    line-height: 19px;
+    font-size: 15px;
+  }
+}
+/* end of 1529.98 */
+/* end of 1479.98 */
+@media (max-width: 1345.98px) {
+  nav ul {
+    padding: 0 20px;
+    height: 90px;
+  }
+  nav ul li {
+    margin-right: 22px;
+  }
+  nav ul li a {
+    font-size: 17px;
+  }
+  nav ul li a.cta {
+    padding: 8px 50px 8px 12px;
+  }
+  nav ul li a.cta i {
+    right: 7px;
+    top: 5px;
+  }
+  header .col-3 {
+    -ms-flex: 0 0 15%;
+    flex: 0 0 15%;
+    max-width: 15%;
+  }
+  header .col-9 {
+    -ms-flex: 0 0 85%;
+    flex: 0 0 85%;
+    max-width: 85%;
+  }
+  header #logo {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+  header.fixed nav ul {
+    height: 90px;
+  }
+  header.fixed #logo {
+    width: 80px;
+    margin: 12px 0 0 12px;
+    padding: 0;
+  }
+  header.fixed .col-3 {
+    -ms-flex: 0 0 104px;
+    flex: 0 0 104px;
+    max-width: 104px;
+  }
+  header.fixed .col-9 {
+    -ms-flex: 0 0 calc(100% - 104px);
+    flex: 0 0 calc(100% - 104px);
+    max-width: calc(100% - 104px);
+  }
+  #pageheader {
+    padding: 130px 0 40px;
+  }
+}
+/* end of 1345.98 */
+/* end of 1299.98 */
+@media (max-width: 1199.98px) {
+  #mainAbout {
+    padding: 60px 0;
+  }
+  #mainAbout h2 {
+    font-size: 48px;
+  }
+  #mainAbout p {
+    line-height: 29px;
+    font-size: 17px;
+  }
+  #mainBox .box-icon {
+    padding: 30px 20px 30px;
+  }
+  #mainBox .box-icon strong {
+    font-size: 40px;
+    line-height: 43px;
+  }
+  #mainBox .box-icon span {
+    line-height: 18px;
+    font-size: 14px;
+  }
+  #mainRooms {
+    padding: 60px 0;
+  }
+  #mainRooms .room-text h3 {
+    font-size: 48px;
+  }
+  #roomsTabContent li {
+    font-size: 16px;
+    padding: 10px 7px;
+  }
+  #page {
+    padding: 60px 0;
+  }
+  #mainInvestor {
+    padding: 60px 0;
+  }
+  #mainInvestor .section-img {
+    width: 100%;
+  }
+  #mainInvestor img {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.08);
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+  #mainWhy {
+    padding: 60px 0 80px;
+  }
+  #mainWhy .why-box-col {
+    width: 465px;
+  }
+  #mainLocation .location-box-small {
+    padding: 15px 15px 15px 35px;
+    margin-bottom: 20px;
+  }
+  #mainLocation .location-box-small .location-box-icon {
+    width: 36px;
+    height: 36px;
+    left: -19px;
+  }
+  #mainLocation .location-box-small .location-box-icon i {
+    font-size: 26px;
+  }
+  #mainLocation .location-box-small h3 {
+    font-size: 16px;
+  }
+  #footer {
+    padding: 30px 0;
+  }
+  #footer .footer-text {
+    padding: 0;
+  }
+  #footer .footer-menu,
+  #footer .footer-copyright {
+    width: 100%;
+    padding-top: 30px;
+  }
+  #mainPlan {
+    padding: 60px 20px;
+  }
+  #mainPlan .container {
+    max-width: 100%;
+  }
+  #mainPlan .plan-nav {
+    margin: 0 0 20px;
+  }
+  #mainPlan .plan-nav div {
+    padding: 0 3px;
+  }
+  nav ul li a {
+    font-size: 15px;
+  }
+  nav ul li a.cta i {
+    font-size: 27px;
+  }
+  header.fixed nav ul,
+  nav ul {
+    height: 80px;
+  }
+  header.fixed #logo {
+    width: 69px;
+  }
+}
+/* end of 1199.98 */
+@media (max-width: 991.98px) {
+  #mainWhy .why-box-col {
+    width: 345px;
+    padding: 0 10px;
+    margin-top: 20px;
+  }
+  #mainWhy .why-box-text {
+    font-size: 17px;
+    line-height: 20px;
+  }
+  #mainLocation .location-box-small {
+    padding: 8px 15px 8px 35px;
+  }
+  #mainLocation .location-carousel {
+    margin-bottom: 50px;
+  }
+  #mainBox .box-icon {
+    padding: 25px 15px;
+    margin-bottom: 30px;
+    height: 210px;
+  }
+  #mainBox .box-icon strong {
+    font-size: 40px;
+    line-height: 43px;
+  }
+  #mainBox .box-icon span {
+    line-height: 18px;
+    font-size: 14px;
+  }
+  #mainBox .box-icon img {
+    margin: 0 auto 15px;
+    width: 50px;
+  }
+  #roomsTabContent {
+    padding-top: 40px;
+  }
+  #mainGallery .slick-slide {
+    padding-bottom: 0;
+  }
+  #mainPlan .table thead th {
+    font-size: 11px;
+    padding: 10px 5px;
+  }
+  #mainPlan .table td {
+    font-size: 11px;
+    padding: 10px 5px;
+  }
+  #mainPlan .table .bttn {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+  #mainPlan .table span {
+    font-size: 14px;
+  }
+  #mainPlan .plan-nav .bttn {
+    padding: 0 10px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    line-height: 14px;
+    text-align: center;
+  }
+  #mieszkanie .bttn-pdf {
+    transition: all 200ms ease-in-out;
+    background: #005229;
+    color: white;
+    min-width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+    margin-top: 0 !important;
+  }
+  #mieszkanie .mieszkanie-status {
+    padding: 6px 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .mieszkanie-dane li {
+    font-size: 14px;
+    padding: 6px 0;
+  }
+  #pageheader h1 {
+    font-size: 28px;
+  }
+  .header-holder {
+    position: static;
+    height: 80px;
+  }
+  header {
+    background: #06562e;
+  }
+  header .col-3,
+  header.fixed .col-3 {
+    -ms-flex: 0 0 104px;
+    flex: 0 0 104px;
+    max-width: 104px;
+  }
+  header .col-9,
+  header.fixed .col-9 {
+    -ms-flex: 0 0 calc(100% - 104px);
+    flex: 0 0 calc(100% - 104px);
+    max-width: calc(100% - 104px);
+  }
+  header #logo,
+  header.fixed #logo {
+    width: 69px;
+    margin: 12px 0 0 12px;
+    padding: 0;
+  }
+  nav ul {
+    border: 0;
+  }
+  nav ul li.scrollsection,
+  nav ul li.pagemenu {
+    display: none;
+  }
+  #pageheader {
+    padding: 30px 0;
+  }
+}
+/* end of 991.98 */
+@media (max-width: 767.98px) {
+  h2 {
+    font-size: 45px;
+  }
+  p {
+    line-height: 28px;
+    font-size: 16px;
+  }
+  #mainBox .box-icon {
+    height: 200px;
+  }
+  #mainBox .box-icon span {
+    line-height: 17px;
+    font-size: 13px;
+  }
+  #mainWhy .why-box-col {
+    width: 255px;
+    padding: 0 5px;
+    margin-top: 10px;
+  }
+  #mainWhy .why-box {
+    padding: 15px;
+  }
+  #mainWhy .why-box-img img {
+    margin-right: 15px;
+    width: 40px;
+  }
+  #mainWhy .why-box-text {
+    font-size: 11px;
+    line-height: 16px;
+    width: calc(100% - 55px);
+  }
+  #footer {
+    text-align: center;
+  }
+  #footer #logo img {
+    margin: 0 auto 20px;
+    width: 120px;
+  }
+  #footer .footer-text p,
+  #footer .footer-copyright p,
+  #footer .footer-menu li {
+    font-size: 11px;
+    line-height: 16px;
+    color: #fff;
+  }
+}
+/* end of 767.98 */
+@media (max-width: 575.98px) {
+  p,
+  .section-title-text,
+  #mainAbout p {
+    line-height: 22px;
+    font-size: 14px;
+  }
+  #mainAbout h2,
+  h2 {
+    font-size: 28px;
+  }
+  #mainBox .box-icon span {
+    line-height: 18px;
+    font-size: 14px;
+  }
+  #mainRooms .nav-tabs .nav-item,
+  #mainRooms .nav-link {
+    width: 100%;
+  }
+  #mainRooms .nav-link {
+    padding: 14px 0;
+    font-size: 17px;
+  }
+  #mainRooms .room-text h3 {
+    font-size: 38px;
+    text-align: center;
+  }
+  #mainRooms .room-text p {
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+  }
+  #roomsTabContent ul {
+    margin: 20px 0 !important;
+  }
+  #mainPlan .plan-nav {
+    display: flex;
+    justify-content: center;
+  }
+  #mainPlan .plan-nav div {
+    -ms-flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  #mainPlan .plan-nav .bttn {
+    margin-top: 15px;
+    height: 37px;
+    line-height: 11px;
+    font-size: 10px;
+    padding: 0 5px;
+  }
+  #mainInvestor,
+  #mainWhy,
+  #mainAbout,
+  #mainRooms,
+  #mainPlan,
+  #page {
+    padding: 30px 20px;
+  }
+  #mainLocation {
+    padding: 30px 20px 0;
+  }
+  #mainGallery {
+    padding: 30px 20px 15px;
+  }
+  #mainBox {
+    padding: 0 20px 30px;
+  }
+  #mainWhy .why-box-col {
+    width: 50%;
+  }
+  #mainWhy .why-box-text {
+    font-size: 9px;
+    line-height: 11px;
+  }
+  #mainLocation .location-box-small {
+    padding: 8px 0 8px 24px;
+    margin-bottom: 12px;
+  }
+  #mainLocation .location-box-small .location-box-icon {
+    width: 26px;
+    height: 26px;
+    left: -14px;
+  }
+  #mainLocation .location-box-small .location-box-icon i {
+    font-size: 18px;
+  }
+  #mainLocation .location-box-small h3 {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  #mainLocation .location-box-small p {
+    font-size: 9px;
+  }
+  #mainLocation .location-carousel {
+    margin-bottom: 30px;
+  }
+  #mainGallery .slick-arrow.slick-prev {
+    left: -3px;
+  }
+  #mainGallery .slick-arrow.slick-next {
+    right: -3px;
+  }
+  #mainGallery .slick-arrow {
+    width: 36px;
+    height: 36px;
+  }
+  #mainGallery .slick-arrow i {
+    font-size: 25px;
+  }
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  #mainPlan .table td {
+    font-size: 14px;
+    padding: 10px;
+    text-align: right;
+  }
+  #mainPlan tr {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-bottom: 0;
+  }
+  #mainPlan td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    font-size: 13px;
+    padding: 7px;
+    text-align: right;
+  }
+  #mainPlan .table span {
+    font-size: 11px;
+  }
+  #mainPlan td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 10px;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+  }
+  /*
+  Label the data
+  */
+  td:nth-of-type(1):before {
+    content: "Mieszkanie";
+  }
+  td:nth-of-type(2):before {
+    content: "Piętro";
+  }
+  td:nth-of-type(3):before {
+    content: "Powierzchnia";
+  }
+  td:nth-of-type(4):before {
+    content: "Dostępność";
+  }
+  .table .bttn {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* end of 575.98 */
+@media (max-width: 440px) {
+  nav ul li a.cta {
+    padding: 8px 12px;
+  }
+  nav ul li a.cta span {
+    display: none;
+  }
+  nav ul li a.cta i {
+    font-size: 20px;
+    position: static;
+  }
+  header.fixed nav ul,
+  nav ul {
+    height: 60px;
+    padding: 0 10px;
+  }
+  .header-holder {
+    height: 60px;
+  }
+  header #logo,
+  header.fixed #logo {
+    width: 56px;
+    margin: 6px 0 0 5px;
+  }
+  header .col-3,
+  header.fixed .col-3 {
+    -ms-flex: 0 0 67px;
+    flex: 0 0 67px;
+    max-width: 67px;
+  }
+  header .col-9,
+  header.fixed .col-9 {
+    -ms-flex: 0 0 calc(100% - 67px);
+    flex: 0 0 calc(100% - 67px);
+    max-width: calc(100% - 67px);
+  }
+  #pageheader {
+    padding: 15px 0;
+  }
+  #pageheader h1 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 420px) {
+  #mainWhy .why-box-col {
+    width: 100%;
+  }
+  #mainWhy .why-box-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  #footer .footer-copyright p,
+  #footer .footer-menu li,
+  #footer .footer-text p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .footer-content p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  #contact-form .bttn {
+    min-width: 100%;
+    margin-top: 0;
+  }
+}
+/* end of 359.98 */
+/* end of 359.98 */
 .la,
 .lab,
 .lad,
