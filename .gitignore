@@ -2,6 +2,7 @@
 .idea/
 .idea
 application/configs/application.ini
+application/layouts/default/inline/
 library/Zend/
 files/
 public/index.php
