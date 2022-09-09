@@ -232,6 +232,27 @@ header {
     }
   }
 }
+.subpage header {
+  background: #06562e;
+  #logo {
+    width: 97px;
+    margin: 12px 0 0 12px;
+  }
+  nav ul {
+    border-bottom: 0;
+    height: 103px;
+  }
+  .col-3 {
+    -ms-flex: 0 0 140px;
+    flex: 0 0 140px;
+    max-width:140px;
+  }
+  .col-9 {
+    -ms-flex: 0 0 calc(100% - 140px);
+    flex: 0 0 calc(100% - 140px);
+    max-width: calc(100% - 140px);
+  }
+}
 
 nav {
   ul {
@@ -726,7 +747,7 @@ nav {
 
 #pageheader {
   background: #005229;
-  padding: 170px 0 60px;
+  padding: 150px 0 45px;
   h1 {
     margin:0;
     color: white;
@@ -1187,6 +1208,26 @@ nav {
       max-width: calc(100% - 104px);
     }
   }
+  .subpage header {
+    nav ul {
+      height: 90px;
+    }
+    #logo {
+      width: 80px;
+      margin: 12px 0 0 12px;
+      padding:0;
+    }
+    .col-3 {
+      -ms-flex: 0 0 104px;
+      flex: 0 0 104px;
+      max-width: 104px;
+    }
+    .col-9 {
+      -ms-flex: 0 0 calc(100% - 104px);
+      flex: 0 0 calc(100% - 104px);
+      max-width: calc(100% - 104px);
+    }
+  }
   #pageheader {
     padding: 130px 0 40px;
   }
@@ -1302,10 +1343,12 @@ nav {
   nav ul li a.cta i {
     font-size: 27px;
   }
+  .subpage header nav ul,
   header.fixed nav ul,
   nav ul {
     height: 80px;
   }
+  .subpage header #logo,
   header.fixed #logo {
     width: 69px
   }
@@ -1419,6 +1462,7 @@ nav {
   header {
     background: #06562e;
   }
+  .subpage header .col-3,
   header .col-3,
   header.fixed .col-3
   {
@@ -1427,6 +1471,7 @@ nav {
     max-width: 104px;
   }
 
+  .subpage header .col-9,
   header .col-9,
   header.fixed .col-9
   {
@@ -1434,6 +1479,7 @@ nav {
     flex: 0 0 calc(100% - 104px);
     max-width: calc(100% - 104px);
   }
+  .subpage header #logo,
   header #logo,
   header.fixed #logo
   {
@@ -1441,6 +1487,7 @@ nav {
     margin: 12px 0 0 12px;
     padding: 0;
   }
+
   nav ul {
     border:0
   }
@@ -1721,6 +1768,7 @@ nav {
       position: static;
     }
   }
+  .subpage header nav ul,
   header.fixed nav ul,
   nav ul {
     height: 60px;
@@ -1729,11 +1777,13 @@ nav {
   .header-holder {
     height: 60px;
   }
+  .subpage header #logo,
   header #logo,
   header.fixed #logo {
     width: 56px;
     margin: 6px 0 0 5px;
   }
+  .subpage header .col-3,
   header .col-3,
   header.fixed .col-3
   {
@@ -1742,6 +1792,7 @@ nav {
     max-width: 67px;
   }
 
+  .subpage header .col-9,
   header .col-9,
   header.fixed .col-9
   {
