@@ -1,24 +1,24 @@
 <div id="mieszkanie" class="pb-3 pb-lg-5">
     <div class="container">
-        <?php if($this->inwestycja->typ == 3) { ?>
+        <?php if($this->inwestycja->typ == 2) { ?>
             <div class="row row-plan-nav">
                 <div class="col-12 col-sm-4">
                     <?php if($this->prev_mieszkanie && $this->prev_mieszkanie->numer){?>
                         <a href="<?=$this->url(array(
                             'tag' => $this->inwestycja->slug,
                             'numer' => $this->prev_mieszkanie->numer
-                        ), 'inwestycja-domek');?>" class="bttn bttn-sm"><i class="las la-arrow-left"></i> Poprzedni lokal</a>
+                        ), 'inwestycja-domek');?>" class="bttn bttn-sm"><i class="las la-arrow-left"></i> Poprzednie</a>
                     <?php } ?>
                 </div>
                 <div class="col-12 col-sm-4 text-center">
-                    <a href="/#plan" class="bttn bttn-center bttn-sm">Plan inwestycji</a>
+                    <a href="/#mainPlan" class="bttn bttn-center bttn-sm">Plan inwestycji</a>
                 </div>
                 <div class="col-12 col-sm-4 text-right">
                     <?php if($this->next_mieszkanie && $this->next_mieszkanie->numer){?>
                         <a href="<?=$this->url(array(
                             'tag' => $this->inwestycja->slug,
                             'numer' => $this->next_mieszkanie->numer
-                        ), 'inwestycja-domek');?>" class="bttn bttn-sm">Następny lokal <i class="las la-arrow-right"></i></a>
+                        ), 'inwestycja-domek');?>" class="bttn bttn-sm">Następne <i class="las la-arrow-right"></i></a>
                     <?php } ?>
                 </div>
             </div>

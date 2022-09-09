@@ -1028,6 +1028,7 @@ div[class*='col-'].slick-slide {
   color: #000;
   border: 1px solid #222;
   transition: all 200ms ease-in-out;
+  margin: 0 0 30px;
 }
 .row-plan-nav .bttn:hover {
   background: #222;
@@ -1579,6 +1580,10 @@ div[class*='col-'].slick-slide {
   header.fixed #logo {
     width: 69px;
   }
+  .row-plan-nav .bttn {
+    min-width: 100%;
+    padding: 10px 0;
+  }
 }
 /* end of 1199.98 */
 @media (max-width: 991.98px) {
@@ -1769,6 +1774,9 @@ div[class*='col-'].slick-slide {
   #mainBox .box-icon span {
     line-height: 18px;
     font-size: 14px;
+  }
+  .row-plan-nav .bttn {
+    margin: 0 0 7px;
   }
   #mainRooms .nav-tabs .nav-item,
   #mainRooms .nav-link {
