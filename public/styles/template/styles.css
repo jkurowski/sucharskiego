@@ -648,6 +648,10 @@ nav li a.cta:hover {
 #mainPlan .plan-nav .bttn.bttn-active {
   border-color: var(--main-color-gold);
 }
+#mainPlan .table tbody tr:hover {
+  background: #ffffd8;
+  cursor: pointer;
+}
 #mainPlan .table thead th {
   font-size: 16px;
   font-weight: 600;

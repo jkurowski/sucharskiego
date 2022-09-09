@@ -328,17 +328,19 @@ $(document).ready(function(){
 		}
 	});
 
-	// $(".scrollsection a").click(function (e) {
-	// 	e.preventDefault();
-	// 	const section = $(this).attr('href');
-	// 	const offset = $(this).data("offset");
-	// 	$('html, body').stop().animate({
-	// 		scrollTop: $(section).offset().top - offset
-	// 	}, 1500, 'easeInOutExpo');
-	// 	if ($('body').hasClass("openmenu")) {
-	// 		$('body').removeClass("openmenu");
-	// 	}
-	// });
+	$('#roomTable tbody').on('click', 'tr', function(event){
+		const home = $(this).data("home");
+		window.location.href = "/m/" + home + "/";
+	});
+
+	$(".scrollto").click(function (e) {
+		e.preventDefault();
+		const section = $(this).attr('href');
+
+		$('html, body').stop().animate({
+			scrollTop: $(section).offset().top - 110
+		}, 1500, 'easeInOutExpo');
+	});
 
 // Tooltip
 	$('area[title]').each(function () {

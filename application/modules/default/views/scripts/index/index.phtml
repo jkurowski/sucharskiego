@@ -120,7 +120,7 @@
                 <h2 class="section-title">MIESZKANIA</h2>
             </div>
             <div class="col-12 col-xl-6">
-                <p class="section-title-text">Z planu budynku wybierz pietro, lub wybierz mieszkanie z <a href="#" class="scrollto"><b>listy</b> <i class="las la-angle-double-down"></i></a></p>
+                <p class="section-title-text">Z planu budynku wybierz pietro, lub wybierz mieszkanie z <a href="#roomTable" class="scrollto" data-offset="103"><b>listy</b> <i class="las la-angle-double-down"></i></a></p>
             </div>
         </div>
         <div class="row" id="plans">
@@ -190,7 +190,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <table class="table">
+                <table class="table" id="roomTable">
                     <thead>
                     <tr>
                         <th class="nosort">Lokal</th>
@@ -202,7 +202,7 @@
                     </thead>
                     <tbody>
                     <?php foreach($this->domki as $d) { ?>
-                        <tr data-floor="<?=$d->numer_pietro + 1;?>">
+                        <tr data-floor="<?=$d->numer_pietro + 1;?>" data-home="<?=$d->numer;?>">
                             <td><?=$d->nazwa;?></td>
                             <td><?=$d->numer_pietro - 1;?></td>
                             <td><?=str_replace('.', '.', $d->metry);?></td>
