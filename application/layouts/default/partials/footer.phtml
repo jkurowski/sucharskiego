@@ -19,14 +19,14 @@
                 </div>
                 <div class="col-12 col-xl-1 d-flex align-items-center">
                     <div class="footer-menu text-center text-xl-left">
-                        <ul class="mb-0 list-unstyled">
-                            <li><a href="">O inwestycji</a></li>
-                            <li><a href="">Mieszkania</a></li>
-                            <li><a href="">Lokalizacja</a></li>
-                            <li><a href="">Galeria</a></li>
-                            <li><a href="">Inwestor</a></li>
-                            <li><a href="">Finansowanie</a></li>
-                            <li><a href="">Kontakt</a></li>
+                        <ul class="mb-0 list-unstyled footermenu">
+                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection li-1"<?php } else {?> class="pagemenu li-1"<?php } ?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainAbout" data-offset="70">O inwestycji</a></li>
+                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection li-2"<?php } else {?> class="pagemenu li-2"<?php } ?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainPlan" data-offset="70">Mieszkania</a></li>
+                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection li-3"<?php } else {?> class="pagemenu li-3"<?php } ?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainLocation" data-offset="70">Lokalizacja</a></li>
+                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection li-4"<?php } else {?> class="pagemenu li-4"<?php } ?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainGallery" data-offset="80">Galeria</a></li>
+                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection li-5"<?php } else {?> class="pagemenu li-5"<?php } ?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainInvestor" data-offset="80">Inwestor</a></li>
+                            <!--<li<?php if($this->current_controller == 'index') {?> class="scrollsection"<?php } ;?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#financing" data-offset="80">Finansowanie</a></li>!-->
+                            <li<?php if($this->current_controller == 'index') {?> class="scrollsection li-6"<?php } else {?> class="pagemenu li-6"<?php } ?>><a href="<?php if($this->current_controller <> 'index') {?><?=$this->baseUrl;?>/<?php } ;?>#mainContact" data-offset="130">Kontakt</a></li>
                         </ul>
                     </div>
                 </div>

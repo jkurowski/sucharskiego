@@ -271,7 +271,7 @@ $(document).ready(function(){
 		$('header').animate({'top': '0px'}, {duration: 300});
 	}
 
-	$('#mainpage .mainmenu').onePageNav({
+	$('#mainpage .mainmenu, #footer .footermenu').onePageNav({
 		currentClass: 'active',
 		changeHash: false,
 		scrollSpeed: 1500,
