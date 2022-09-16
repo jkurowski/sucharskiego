@@ -31,7 +31,7 @@ class Default_IndexController extends kCMS_Site
 
         $powierzchniaQuery = $this->roomModel->select()
             ->where('id_inwest = ?', 1);
-        $powierzchniaQuery->where('typ !=?', 4);
+        //$powierzchniaQuery->where('typ !=?', 4);
         $domki = $this->roomModel->fetchAll($powierzchniaQuery);
 
         $trySendEmail = '';

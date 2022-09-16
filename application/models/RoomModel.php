@@ -95,7 +95,7 @@ class Model_RoomModel  extends Zend_Db_Table_Abstract
 		
 		$query = $this->select()
                 ->where('id_inwest =?', $id)
-                ->where('numer =?', $numer);
+                ->where('id =?', $numer);
         
 		if($building){
             $query->where('id_budynek = ?', $building);

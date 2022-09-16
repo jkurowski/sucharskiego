@@ -160,7 +160,7 @@
                             if($f->id == $mieszkania->id_pietro) {
                                 if($mieszkania->status <> 2) {
                                     $mieszkanie = str_replace('href=""', 'href="' . $this->url(array(
-                                            'numer' => $mieszkania->numer
+                                            'numer' => $mieszkania->id
                                         ), 'inwestycja-domek') . '" data-id="' . $mieszkania->id . '"', $mieszkania->html);
                                 } else {
                                     $mieszkanie = str_replace('href=""','href="#"', $mieszkania->html);
@@ -207,7 +207,7 @@
                             <td><?=$d->numer_pietro - 1;?></td>
                             <td><?=str_replace('.', '.', $d->metry);?></td>
                             <td><span class="<?=$this->roomStatusTag($d->status);?>-ap"><?=$this->roomStatus($d->status);?></span></td>
-                            <td><a href="<?= $this->url(array('numer' => $d->numer), 'inwestycja-domek');?>" class="bttn bttn-green">Zobacz plan</a></td>
+                            <td><a href="<?= $this->url(array('numer' => $d->id), 'inwestycja-domek');?>" class="bttn bttn-green">Zobacz plan</a></td>
                         </tr>
                     <?php } ?>
                     </tbody>
