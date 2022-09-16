@@ -129,7 +129,7 @@
                     <div id="planImg">
                         <img src="<?=$this->filesUrl(); ?>/inwestycje/plan/<?=$this->plan->plik;?>" alt="Plan inwestycji" style="max-width:100%;height:auto;" id="buildingmap" usemap="#buildingmap">
                         <map name="buildingmap">
-                            <?php foreach($this->floors as $f) {
+                            <?php foreach($this->floors as $int => $f) {
                                 if($this->pietro_stats)
                                 {
                                     $floor_stats = '';
@@ -143,7 +143,7 @@
 
                                 $floor =  str_replace('href=""','href="#"', $f->html);
                                 $floor =  str_replace('shape="polygon"','shape="poly"', $floor);
-                                echo str_replace('alt=""','title="<h6>'.$f->nazwa.'</h6>" alt="pietro-'.$f->id.'" data-floornumber="'.$f->numer.'" data-floortype="'.$f->typ.'"', $floor);
+                                echo str_replace('alt=""','title="<h6>'.$f->nazwa.'</h6>" alt="pietro-'.$f->id.'" data-floornumber="'.$f->id.'" data-slickorder="'.($int + 1).'" data-floortype="'.$f->typ.'"', $floor);
                             } ?>
                         </map>
                     </div>
@@ -179,9 +179,9 @@
             <div class="col">
                 <a href="#" class="bttn bttn-active" data-floornumber="0">Budynek</a>
             </div>
-            <?php foreach($this->floors as $f) { ?>
+            <?php foreach($this->floors as $int => $f) { ?>
                 <div class="col-3 col-sm">
-                    <a href="#" class="bttn" data-floornumber="<?=$f->numer_lista;?>"><?=$f->nazwa;?></a>
+                    <a href="#" class="bttn" data-floor="<?=$f->id;?>" data-floornumber="<?=$int + 1;?>"><?=$f->nazwa;?></a>
                 </div>
             <?php } ?>
         </div>
@@ -202,7 +202,7 @@
                     </thead>
                     <tbody>
                     <?php foreach($this->domki as $d) { ?>
-                        <tr data-floor="<?=$d->numer_pietro + 1;?>" data-home="<?=$d->numer;?>">
+                        <tr data-floor="<?=$d->id_pietro;?>" data-home="<?=$d->numer;?>">
                             <td><?=$d->nazwa;?></td>
                             <td><?=$d->numer_pietro - 1;?></td>
                             <td><?=str_replace('.', '.', $d->metry);?></td>

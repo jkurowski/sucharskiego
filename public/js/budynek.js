@@ -11,13 +11,14 @@ $(document).ready(function(){
 
 	$(".plan-nav a").click(function(b){
 		const f = $(this).attr("data-floornumber");
+		const fo = $(this).attr("data-floor");
 		$(".plan-nav a").removeClass('bttn-active');
 		$(this).addClass('bttn-active');
 		$('#plans').slick('slickGoTo', f);
 
 		$('table tbody tr').hide();
 		if(f > 0) {
-			$('table tbody tr[data-floor="' + f + '"]').show();
+			$('table tbody tr[data-floor="' + fo + '"]').show();
 		} else {
 			$('table tbody tr').show();
 		}
@@ -27,14 +28,17 @@ $(document).ready(function(){
 	$("#buildingmap").mapster({
 		onClick: function(g) {
 			const f = $(this).attr("data-floornumber");
-			const floor_number = parseInt(f) + parseInt(1);
+			const fo = $(this).attr("data-slickorder");
 
-			$('#plans').slick('slickGoTo', floor_number);
+			console.log(fo);
+
+			$('#plans').slick('slickGoTo', fo);
+
 			$(".plan-nav a").removeClass('bttn-active');
-			$('.plan-nav a[data-floornumber="' + floor_number.toString() + '"]').addClass('bttn-active');
+			$('.plan-nav a[data-floornumber="' + fo + '"]').addClass('bttn-active');
 
 			$('table tbody tr').hide();
-			$('table tbody tr[data-floor="' + floor_number.toString() + '"]').show();
+			$('table tbody tr[data-floor="' + f + '"]').show();
 
 			return false
 		},
