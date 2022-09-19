@@ -67,11 +67,18 @@
                 </div>
             </div>
             <div class="col-12 col-md-7">
-                <?php if($this->mieszkanie->plik){?>
-                    <div class="mieszkanie-rzut">
-                        <a href="<?=$this->filesUrl(); ?>/inwestycje/pomieszczenie/<?=$this->mieszkanie->plik;?>" title="<?=$this->mieszkanie->nazwa;?>"><img src="<?=$this->filesUrl(); ?>/inwestycje/pomieszczenie/<?=$this->mieszkanie->plik;?>" alt="<?=$this->mieszkanie->nazwa;?>"></a>
-                    </div>
-                <?php } ?>
+                <div class="mieszkanie-rzuty">
+                    <?php if($this->mieszkanie->plik){?>
+                        <div class="mieszkanie-rzut">
+                            <a href="<?=$this->filesUrl(); ?>/inwestycje/pomieszczenie/<?=$this->mieszkanie->plik;?>" title="<?=$this->mieszkanie->nazwa;?>"><img src="<?=$this->filesUrl(); ?>/inwestycje/pomieszczenie/<?=$this->mieszkanie->plik;?>" alt="<?=$this->mieszkanie->nazwa;?>"></a>
+                        </div>
+                    <?php } ?>
+                    <?php if($this->mieszkanie->plik2){?>
+                        <div class="mieszkanie-rzut">
+                            <a href="<?=$this->filesUrl(); ?>/inwestycje/pomieszczenie/<?=$this->mieszkanie->plik2;?>" title="<?=$this->mieszkanie->nazwa;?>"><img src="<?=$this->filesUrl(); ?>/inwestycje/pomieszczenie/<?=$this->mieszkanie->plik2;?>" alt="<?=$this->mieszkanie->nazwa;?>"></a>
+                        </div>
+                    <?php } ?>
+                </div>
             </div>
         </div>
         <?php if($this->mieszkanie->tekst){?>
@@ -90,5 +97,6 @@
 <link rel="stylesheet" href="<?=$this->jsUrl(); ?>/simple-lightbox.css">
 <script>
     const lightbox = $('.mieszkanie-rzut a').simpleLightbox();
+    $(".mieszkanie-rzuty").responsiveSlides({auto:true, pager:false, nav:true, timeout:5000, random:false, speed: 500});
 </script>
 <?=$this->render('contact/form.phtml');?>

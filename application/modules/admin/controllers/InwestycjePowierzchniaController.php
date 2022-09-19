@@ -61,7 +61,7 @@ class Admin_InwestycjePowierzchniaController extends kCMS_Admin
 
             $obrazek2 = $_FILES['obrazek2']['name'];
             if($_FILES['obrazek2']['size'] > 0) {
-                $plik2 = date('Ymdhis').'-pietro_'.slugImg($formData['nazwa'], $obrazek2);
+                $plik2 = date('Ymdhis').'-3d_'.slugImg($formData['nazwa'], $obrazek2);
             }
 
             $obrazek3 = $_FILES['obrazek3']['name'];
@@ -132,20 +132,7 @@ class Admin_InwestycjePowierzchniaController extends kCMS_Admin
                     $this->Room->update(array('pdf' => $plikpdf), 'id = '.$lastId);
                 }
 
-                // Inwestycja osiedlow
-                if($inwestycja->typ == 1) {
-                    $this->_redirect('admin/inwestycje-budynek-pietro/show/id/'.$p.'/i/'.$i.'/b/'.$b.'/');
-                }
-
-                // Inwestycja budynkowa
-                if($inwestycja->typ == 2) {
-                    $this->_redirect('/admin/inwestycje-pietro/show/id/'.$p.'/i/'.$i.'/');
-                }
-
-                // Inwestycja z domkami
-                if($inwestycja->typ == 3) {
-                    $this->_redirect('/admin/inwestycje/show/id/'.$i.'/');
-                }
+                $this->redirect('/admin/inwestycje-pietro/show/id/'.$p.'/i/'.$i.'/');
             }
         }
     }
@@ -156,7 +143,6 @@ class Admin_InwestycjePowierzchniaController extends kCMS_Admin
 
         // Odczytanie id
         $i = (int)$this->getRequest()->getParam('i');
-        $b = (int)$this->getRequest()->getParam('b');
         $p = (int)$this->getRequest()->getParam('p');
         $id = (int)$this->getRequest()->getParam('id');
 
@@ -199,7 +185,7 @@ class Admin_InwestycjePowierzchniaController extends kCMS_Admin
 
             $obrazek2 = $_FILES['obrazek2']['name'];
             if($_FILES['obrazek2']['size'] > 0) {
-                $plik2 = date('Ymdhis').'-pietro_'.slugImg($formData['nazwa'], $obrazek2);
+                $plik2 = date('Ymdhis').'-3d_'.slugImg($formData['nazwa'], $obrazek2);
             }
 
             $obrazek3 = $_FILES['obrazek3']['name'];
@@ -280,20 +266,7 @@ class Admin_InwestycjePowierzchniaController extends kCMS_Admin
                     $this->Room->update(array('pdf' => $plikpdf), 'id = '.$id);
                 }
 
-                // Inwestycja osiedlow
-                if($inwestycja->typ == 1) {
-                    $this->_redirect('admin/inwestycje-budynek-pietro/show/id/'.$p.'/i/'.$i.'/b/'.$b.'/');
-                }
-
-                // Inwestycja budynkowa
-                if($inwestycja->typ == 2) {
-                    $this->_redirect('/admin/inwestycje-pietro/show/id/'.$p.'/i/'.$i.'/');
-                }
-
-                // Inwestycja z domkami
-                if($inwestycja->typ == 3) {
-                    $this->_redirect('/admin/inwestycje/show/id/'.$i.'/');
-                }
+                $this->redirect('/admin/inwestycje-pietro/show/id/'.$p.'/i/'.$i.'/');
             }
         }
     }
@@ -312,8 +285,9 @@ class Admin_InwestycjePowierzchniaController extends kCMS_Admin
         unlink(FILES_PATH."/inwestycje/pomieszczenie/thumbs/".$powierzchnia->plik2);
         unlink(FILES_PATH."/inwestycje/pomieszczenie/".$powierzchnia->plik3);
         unlink(FILES_PATH."/inwestycje/pomieszczenie/thumbs/".$powierzchnia->plik3);
+        unlink(FILES_PATH."/inwestycje/pdf/".$powierzchnia->pdf);
 
         $powierzchnia->delete();
-        $this->_redirect('/admin/inwestycje/show/id/'.$i.'/');
+        $this->redirect('/admin/inwestycje/show/id/'.$i.'/');
     }
 }

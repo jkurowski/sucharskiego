@@ -282,7 +282,7 @@ class Form_PowierzchniaForm extends Zend_Form
                 array(array('row' => 'HtmlTag'), array('tag' => 'div', 'class' => 'formRow'))));
 
         $obrazek2 = new Zend_Form_Element_File('obrazek2');
-        $obrazek2->setLabel('Plan piętra')
+        $obrazek2->setLabel('Plan mieszkania 3D')
             ->setRequired(false)
             ->addValidator('NotEmpty')
             ->addValidator('Extension', false, 'jpg, png, jpeg, gif')
@@ -618,7 +618,7 @@ class Form_PowierzchniaForm extends Zend_Form
 			$taras,
 			$loggia,
 			$obrazek,
-			//$obrazek2,
+			$obrazek2,
 			//$obrazek3,
 			$pdf,
 			$tekst,
